@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoRide Connect</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Google Maps API -->
+   <!-- Add this in the <head> section -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+  <header>
+    <h1>EcoRide Connect</h1>
+    <p>Share rides, save the environment!</p>
+  </header>
+
+  <main>
+    <div id="map" style="height: 400px; width: 100%;"></div>
+
+    <form id="user-form">
+      <h2>Register</h2>
+      <label for="name">Name:</label>
+      <input type="text" id="name" required><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required><br>
+
+      <label for="role">I want to:</label>
+      <select id="role">
+        <option value="offer">Offer a Ride</option>
+        <option value="need">Need a Ride</option>
+      </select><br>
+
+      <label for="start">Start Location:</label>
+      <input type="text" id="start" required><br>
+
+      <label for="destination">Destination:</label>
+      <input type="text" id="destination" required><br>
+
+      <button type="submit">Register</button>
+    </form>
+
+    <section>
+      <h2>Map</h2>
+      <div id="map" style="height: 400px; width: 100%;"></div>
+      <button id="route-btn">Show Route</button>
+    </section>
+    
+  </main>
+
+  <!-- Link to external JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
